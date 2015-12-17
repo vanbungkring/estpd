@@ -12,7 +12,7 @@ $(document).ready(function() {
     console.log("document ready");
     var offset = 0;
     plot();
-
+    plot2();
     function plot() {
         var retribusiHotel = [],
             retribusiReklame = [];
@@ -23,10 +23,6 @@ $(document).ready(function() {
             retribusiRestoran.push([i,getRandom(10,50)]);
             retribusiReklame.push([i,getRandom(20,100)]);
             retrubusiTanahAir.push([i,getRandom(30,70)]);
-
-            // retribusiRestoran.push([i, Math.cos(i + offset)]);
-            // retribusiReklame.push([i, Math.sin(i + offset)]);
-            // retrubusiTanahAir.push([i, Math.cos(i + offset)]);
         }
 
         var options = {
@@ -54,17 +50,17 @@ $(document).ready(function() {
                 }
             }
         };
-        var plotObjReklame = $.plot($("#flot-line-chart-reklame"), [{
-                data: retribusiReklame,
-                label: "Retribusi Reklame"
-            }],
-            options);
-            
-       var plotObjRestoran = $.plot($("#flot-line-chart-restoran"), [{
-                    data: retribusiRestoran,
-                    label: "Retribusi Restoran"
-                }],
-                options);
+        // var plotObjReklame = $.plot($("#flot-line-chart-reklame"), [{
+        //         data: retribusiReklame,
+        //         label: "Retribusi Reklame"
+        //     }],
+        //     options);
+
+      //  var plotObjRestoran = $.plot($("#flot-line-chart-restoran"), [{
+      //               data: retribusiRestoran,
+      //               label: "Retribusi Restoran"
+      //           }],
+      //           options);
 
         var plotObj = $.plot($("#flot-line-chart"), [{
                 data: retribusiHotel,
@@ -78,6 +74,76 @@ $(document).ready(function() {
             }, {
                 data: retrubusiTanahAir,
                 label: "Retribusi Tanah Air"
+            }],
+            options);
+
+            var plotObj2 = $.plot($("#flot-line-chart"), [{
+                    data: retribusiHotel,
+                    label: "Retribusi Hotel"
+                }, {
+                    data: retribusiReklame,
+                    label: "Retribusi Reklame"
+                }, {
+                    data: retribusiRestoran,
+                    label: "Retribusi Restoran"
+                }, {
+                    data: retrubusiTanahAir,
+                    label: "Retribusi Tanah Air"
+                }],
+                options);
+    }
+    function plot2() {
+        var retribusiHotel = [],
+            retribusiReklame = [];
+            retribusiRestoran = [];
+            retrubusiTanahAir = [];
+        for (var i = 0; i < 100; i ++) {
+            retribusiHotel.push([i,getRandom(10,100)]);
+            retribusiRestoran.push([i,getRandom(10,50)]);
+            retribusiReklame.push([i,getRandom(20,100)]);
+            retrubusiTanahAir.push([i,getRandom(30,70)]);
+        }
+
+        var options = {
+            series: {
+                lines: {
+                    show: true
+                },
+                points: {
+                    show: true
+                }
+            },
+            grid: {
+                hoverable: true //IMPORTANT! this is needed for tooltip to work
+            },
+            yaxis: {
+                min: 0,
+                max: 100
+            },
+            tooltip: true,
+            tooltipOpts: {
+                content: "'%s' of %x.1 is %y.4",
+                shifts: {
+                    x: -60,
+                    y: 25
+                }
+            }
+        };
+        // var plotObjReklame = $.plot($("#flot-line-chart-reklame"), [{
+        //         data: retribusiReklame,
+        //         label: "Retribusi Reklame"
+        //     }],
+        //     options);
+
+      //  var plotObjRestoran = $.plot($("#flot-line-chart-restoran"), [{
+      //               data: retribusiRestoran,
+      //               label: "Retribusi Restoran"
+      //           }],
+      //           options);
+
+        var plotObj = $.plot($("#flot-line-chart-reklame"), [{
+                data: retribusiReklame,
+                label: "Retribusi Reklame"
             }],
             options);
     }

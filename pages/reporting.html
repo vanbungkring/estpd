@@ -303,165 +303,142 @@
             </div>
             <!-- /.row -->
             <div class="row">
-              <div class="col-lg-12">
-                                  <div class="panel panel-default">
+              <div class="panel panel-default">
                                       <div class="panel-heading">
-                                          Line Chart Example
+                                          DataTables Advanced Tables
                                       </div>
                                       <!-- /.panel-heading -->
                                       <div class="panel-body">
-                                          <div class="flot-chart">
-                                              <div class="flot-chart-content" id="flot-line-chart" style="padding: 0px; position: relative;"><canvas class="flot-base" width="937" height="400" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 937px; height: 400px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 72px; top: 381px; left: 25px; text-align: center;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 72px; top: 381px; left: 100px; text-align: center;">1</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 72px; top: 381px; left: 175px; text-align: center;">2</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 72px; top: 381px; left: 250px; text-align: center;">3</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 72px; top: 381px; left: 325px; text-align: center;">4</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 72px; top: 381px; left: 400px; text-align: center;">5</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 72px; top: 381px; left: 476px; text-align: center;">6</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 72px; top: 381px; left: 551px; text-align: center;">7</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 72px; top: 381px; left: 626px; text-align: center;">8</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 72px; top: 381px; left: 701px; text-align: center;">9</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 72px; top: 381px; left: 772px; text-align: center;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 72px; top: 381px; left: 847px; text-align: center;">11</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 337px; left: 2px; text-align: right;">-1.0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 260px; left: 2px; text-align: right;">-0.5</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 184px; left: 7px; text-align: right;">0.0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 108px; left: 7px; text-align: right;">0.5</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 31px; left: 7px; text-align: right;">1.0</div></div></div><canvas class="flot-overlay" width="937" height="400" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 937px; height: 400px;"></canvas><div class="legend"><div style="position: absolute; width: 45px; height: 34px; top: 14px; right: 13px; opacity: 0.85; background-color: rgb(255, 255, 255);"> </div><table style="position:absolute;top:14px;right:13px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(237,194,64);overflow:hidden"></div></div></td><td class="legendLabel">sin(x)</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(175,216,248);overflow:hidden"></div></div></td><td class="legendLabel">cos(x)</td></tr></tbody></table></div></div>
+                                          <div class="dataTable_wrapper">
+                                              <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="dataTables-example_length"><label>Show <select name="dataTables-example_length" aria-controls="dataTables-example" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"><div id="dataTables-example_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="dataTables-example"></label></div></div></div><div class="row"><div class="col-sm-12"><table class="table table-striped table-bordered table-hover dataTable no-footer" id="dataTables-example" role="grid" aria-describedby="dataTables-example_info">
+                                                  <thead>
+                                                      <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 151px;">Rendering engine</th><th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 185px;">Browser</th><th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 172px;">Platform(s)</th><th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 129px;">Engine version</th><th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 99px;">CSS grade</th></tr>
+                                                  </thead>
+                                                  <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                  <tr class="gradeA odd" role="row">
+                                                          <td class="sorting_1">Gecko</td>
+                                                          <td>Firefox 1.0</td>
+                                                          <td>Win 98+ / OSX.2+</td>
+                                                          <td class="center">1.7</td>
+                                                          <td class="center">A</td>
+                                                      </tr><tr class="gradeA even" role="row">
+                                                          <td class="sorting_1">Gecko</td>
+                                                          <td>Firefox 1.5</td>
+                                                          <td>Win 98+ / OSX.2+</td>
+                                                          <td class="center">1.8</td>
+                                                          <td class="center">A</td>
+                                                      </tr><tr class="gradeA odd" role="row">
+                                                          <td class="sorting_1">Gecko</td>
+                                                          <td>Firefox 2.0</td>
+                                                          <td>Win 98+ / OSX.2+</td>
+                                                          <td class="center">1.8</td>
+                                                          <td class="center">A</td>
+                                                      </tr><tr class="gradeA even" role="row">
+                                                          <td class="sorting_1">Gecko</td>
+                                                          <td>Firefox 3.0</td>
+                                                          <td>Win 2k+ / OSX.3+</td>
+                                                          <td class="center">1.9</td>
+                                                          <td class="center">A</td>
+                                                      </tr><tr class="gradeA odd" role="row">
+                                                          <td class="sorting_1">Gecko</td>
+                                                          <td>Camino 1.0</td>
+                                                          <td>OSX.2+</td>
+                                                          <td class="center">1.8</td>
+                                                          <td class="center">A</td>
+                                                      </tr><tr class="gradeA even" role="row">
+                                                          <td class="sorting_1">Gecko</td>
+                                                          <td>Camino 1.5</td>
+                                                          <td>OSX.3+</td>
+                                                          <td class="center">1.8</td>
+                                                          <td class="center">A</td>
+                                                      </tr><tr class="gradeA odd" role="row">
+                                                          <td class="sorting_1">Gecko</td>
+                                                          <td>Netscape 7.2</td>
+                                                          <td>Win 95+ / Mac OS 8.6-9.2</td>
+                                                          <td class="center">1.7</td>
+                                                          <td class="center">A</td>
+                                                      </tr><tr class="gradeA even" role="row">
+                                                          <td class="sorting_1">Gecko</td>
+                                                          <td>Netscape Browser 8</td>
+                                                          <td>Win 98SE+</td>
+                                                          <td class="center">1.7</td>
+                                                          <td class="center">A</td>
+                                                      </tr><tr class="gradeA odd" role="row">
+                                                          <td class="sorting_1">Gecko</td>
+                                                          <td>Netscape Navigator 9</td>
+                                                          <td>Win 98+ / OSX.2+</td>
+                                                          <td class="center">1.8</td>
+                                                          <td class="center">A</td>
+                                                      </tr><tr class="gradeA even" role="row">
+                                                          <td class="sorting_1">Gecko</td>
+                                                          <td>Mozilla 1.0</td>
+                                                          <td>Win 95+ / OSX.1+</td>
+                                                          <td class="center">1</td>
+                                                          <td class="center">A</td>
+                                                      </tr></tbody>
+                                              </table></div></div>
                                           </div>
+
                                       </div>
                                       <!-- /.panel-body -->
                                   </div>
-                                  <!-- /.panel -->
-                              </div>
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Data Pajak Retribusi Kabupaten Manado 
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="dataTable_wrapper">
-                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                    <thead>
-                                        <tr>
-                                            <th>Nomor Bayar</th>
-                                            <th>Tanggal</th>
-                                            <th>Obyek Pajak</th>
-                                            <th>Masa Pajak</th>
-                                            <th>Jatuh Tempo</th>
-                                            <th>Omset</th>
-                                            <th>Pajak</th>
-                                            <th>Tanggal</th>
-                                            <th>Denda</th>
-                                            <th>Bayar</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="odd gradeX">
-                                            <td>63738993838</td>
-                                            <td>25 November 2015</td>
-                                            <td>Diskotik Alexis</td>
-                                            <td class="center">OKT 2015</td>
-                                            <td class="center">1 Desember 2015</td>
-                                            <td class="center">IDR 250.000.000</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                            <td class="center">29 November 2015</td>
-                                            <td class="center">0</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td>63738993838</td>
-                                            <td>25 November 2015</td>
-                                            <td>Diskotik Alexis</td>
-                                            <td class="center">OKT 2015</td>
-                                            <td class="center">1 Desember 2015</td>
-                                            <td class="center">IDR 250.000.000</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                            <td class="center">29 November 2015</td>
-                                            <td class="center">0</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td>63738993838</td>
-                                            <td>25 November 2015</td>
-                                            <td>Diskotik Alexis</td>
-                                            <td class="center">OKT 2015</td>
-                                            <td class="center">1 Desember 2015</td>
-                                            <td class="center">IDR 250.000.000</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                            <td class="center">29 November 2015</td>
-                                            <td class="center">0</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td>63738993838</td>
-                                            <td>25 November 2015</td>
-                                            <td>Diskotik Alexis</td>
-                                            <td class="center">OKT 2015</td>
-                                            <td class="center">1 Desember 2015</td>
-                                            <td class="center">IDR 250.000.000</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                            <td class="center">29 November 2015</td>
-                                            <td class="center">0</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td>63738993838</td>
-                                            <td>25 November 2015</td>
-                                            <td>Diskotik Alexis</td>
-                                            <td class="center">OKT 2015</td>
-                                            <td class="center">1 Desember 2015</td>
-                                            <td class="center">IDR 250.000.000</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                            <td class="center">29 November 2015</td>
-                                            <td class="center">0</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td>63738993838</td>
-                                            <td>25 November 2015</td>
-                                            <td>Diskotik Alexis</td>
-                                            <td class="center">OKT 2015</td>
-                                            <td class="center">1 Desember 2015</td>
-                                            <td class="center">IDR 250.000.000</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                            <td class="center">29 November 2015</td>
-                                            <td class="center">0</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td>63738993838</td>
-                                            <td>25 November 2015</td>
-                                            <td>Diskotik Alexis</td>
-                                            <td class="center">OKT 2015</td>
-                                            <td class="center">1 Desember 2015</td>
-                                            <td class="center">IDR 250.000.000</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                            <td class="center">29 November 2015</td>
-                                            <td class="center">0</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td>63738993838</td>
-                                            <td>25 November 2015</td>
-                                            <td>Diskotik Alexis</td>
-                                            <td class="center">OKT 2015</td>
-                                            <td class="center">1 Desember 2015</td>
-                                            <td class="center">IDR 250.000.000</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                            <td class="center">29 November 2015</td>
-                                            <td class="center">0</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                        </tr>
-                                        <tr class="odd gradeX">
-                                            <td>63738993838</td>
-                                            <td>25 November 2015</td>
-                                            <td>Diskotik Alexis</td>
-                                            <td class="center">OKT 2015</td>
-                                            <td class="center">1 Desember 2015</td>
-                                            <td class="center">IDR 250.000.000</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                            <td class="center">29 November 2015</td>
-                                            <td class="center">0</td>
-                                            <td class="center">IDR 25.000.000</td>
-                                        </tr>
-
-
-                                    </tbody>
-                                </table>
-                            </div>
-
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-12 -->
             </div>
 
         </div>
