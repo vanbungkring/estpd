@@ -54,6 +54,11 @@ $(document).ready(function() {
                 }
             }
         };
+        var plotObjReklame = $.plot($("#flot-line-chart-reklame"), [{
+                data: retribusiReklame,
+                label: "Retribusi Reklame"
+            }],
+            options);
 
         var plotObj = $.plot($("#flot-line-chart"), [{
                 data: retribusiHotel,
