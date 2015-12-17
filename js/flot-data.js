@@ -1,15 +1,32 @@
-//Flot Line Chart
+/**
+ * Get a random floating point number between `min` and `max`.
+ *
+ * @param {number} min - min number
+ * @param {number} max - max number
+ * @return {float} a random floating point number
+ */
+function getRandom(min, max) {
+  return Math.random() * (max - min) + min;
+}
 $(document).ready(function() {
     console.log("document ready");
     var offset = 0;
     plot();
 
     function plot() {
-        var sin = [],
-            cos = [];
-        for (var i = 0; i < 12; i += 0.2) {
-            sin.push([i, Math.sin(i + offset)]);
-            cos.push([i, Math.cos(i + offset)]);
+        var retribusiHotel = [],
+            retribusiReklame = [];
+            retribusiRestoran = [];
+            retrubusiTanahAir = [];
+        for (var i = 0; i < 100; i ++) {
+            retribusiHotel.push([i,getRandom(10,100)]);
+            retribusiRestoran.push([i,getRandom(10,50)]);
+            retribusiReklame.push([i,getRandom(20,100)]);
+            retrubusiTanahAir.push([i,getRandom(30,70)]);
+
+            // retribusiRestoran.push([i, Math.cos(i + offset)]);
+            // retribusiReklame.push([i, Math.sin(i + offset)]);
+            // retrubusiTanahAir.push([i, Math.cos(i + offset)]);
         }
 
         var options = {
@@ -25,8 +42,8 @@ $(document).ready(function() {
                 hoverable: true //IMPORTANT! this is needed for tooltip to work
             },
             yaxis: {
-                min: -1.2,
-                max: 1.2
+                min: 0,
+                max: 100
             },
             tooltip: true,
             tooltipOpts: {
@@ -39,11 +56,17 @@ $(document).ready(function() {
         };
 
         var plotObj = $.plot($("#flot-line-chart"), [{
-                data: sin,
-                label: "sin(x)"
+                data: retribusiHotel,
+                label: "Retribusi Hotel"
             }, {
-                data: cos,
-                label: "cos(x)"
+                data: retribusiReklame,
+                label: "Retribusi Reklame"
+            }, {
+                data: retribusiRestoran,
+                label: "Retribusi Restoran"
+            }, {
+                data: retrubusiTanahAir,
+                label: "Retribusi Tanah Air"
             }],
             options);
     }
